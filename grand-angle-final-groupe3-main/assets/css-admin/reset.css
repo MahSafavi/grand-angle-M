@@ -1,0 +1,54 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+footer,
+header,
+blockquote,
+pre,
+a,
+img,
+span,
+section,
+article {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+} 

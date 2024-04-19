@@ -1,0 +1,1134 @@
+/***********   GESTION des collaborateur ***********/
+.gestion{
+    grid-column: 2/12;
+    grid-row: 2/12;
+    background-color: var(--SECONDARY);
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 1350px;
+  }
+
+  .page-exposition h2 {
+    color : #78908E;
+  }
+
+  .list-collab-contain {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .title-list-collab {
+    padding: 1rem;
+  }
+  
+  .title-page{
+    color: #78908E;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--FONTTITLE);
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+  }
+  
+  .btn-ajouter{
+    background-color: var(--ACCENT1);
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 1.25rem;
+    border-radius: 25px;
+    border:none;
+    margin: 1rem;
+  }
+  
+  .btn-ajouter:hover{
+    background-color: var(--ACCENT1);
+  }
+  
+  .btn-ajouter a{
+    color:var(--FONTCOLOR2);
+  text-decoration: none;
+  }
+  
+  .btn-ajouter a:hover{
+    color:var(--FONTCOLOR2);
+  }
+  
+  .btn-add-collab{
+    display:flex;
+    justify-content: end;
+  }
+
+  
+  .table-collab{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  }
+  
+  .list-collab{
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    min-width:400px;
+    text-align: center;
+    background-color: var(--BGCOLORPR);
+  }
+  
+  .list-collab thead{
+    background-color: var(--PRIMARY);
+    color: var(--FONTCOLOR);
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-top-left-radius: 25px;
+  
+  }
+  
+  .list-collab th,td{
+    padding: 12px 15px;
+  }
+  
+  .list-collab tbody,tr{
+    border: 1px solid #ddd;
+  }
+  
+  .list-collab tr:nth-of-type(even){
+    background-color: #fff;
+  }
+
+  td.svg-expo {
+    display: flex;
+  }
+  
+  .ctr-icon svg{
+    fill: var(--FONTCOLOR2);
+    width: 1rem;
+    height: 1rem;
+    margin: 0 1rem;
+  }
+  
+  .ctr-icon svg:hover{
+    fill: var(--ACCENT1);
+  }
+  
+  /***********   PAGE ADD COLLABORATEUR  et ADD SERVICE ***********/
+  
+  .add-collab-contain {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .add-collab{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--SECONDARY);
+    color: var(--FONTCOLOR2);
+    border-radius: 25px;
+    font-family: var(--FONTTEXT);
+    font-weight: 500;
+    position: relative;
+  }
+   
+  .field-add-collab{
+    width:550px;
+    height:35px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+  }
+   
+  .input-sub-add-collab{
+    width: fit-content;
+    border:none;
+    border-radius: 25px;
+    padding: 1rem 1.25rem;
+    margin: 15px 10px;
+    background-color: var(--ACCENT1);
+    color:var(--FONTCOLOR2);
+    font-weight: 700;
+  }
+   
+   .input-sub-add-collab:hover{
+    color: var(--FONTCOLOR);
+  }
+
+  .valider-service{
+    width: fit-content;
+    height: fit-content;
+    border:none;
+    border-radius: 25px;
+    padding: 1rem 1.25rem;
+    margin: 10px 25px;
+    background-color: var(--ACCENT1);
+    color:var(--FONTCOLOR2);
+    font-weight: 700;
+  }
+   
+  .valider-service:hover{
+    color: var(--FONTCOLOR);
+  }
+   
+  #add-service{
+    width: 140px;
+    border:none;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 0px 10px;
+    background-color: var(--ACCENT1);
+    color:var(--FONTCOLOR);
+    font-weight: 700;
+  }
+   
+  #add-service:hover{
+    color: var(--FONTCOLOR2);
+    font-family: var(--FONTTITLE);
+    font-weight: 700;
+  }
+   
+  .title-form{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-family: var(--FONTTITLE);
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+   
+ 
+  .plus:hover{
+  background-color: var(--ACCENT1);
+  }
+   
+  .form-add-service{
+   width:400px;
+    height: 250px;
+    margin-top:5%;
+    margin-left:auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFF;
+    color: var(--FONTCOLOR2);
+    border-radius: 25px;
+    font-family: var(--FONTTEXT);
+    font-weight: 500;
+  }
+  .service-pup{
+    width:100%;
+    height: 100%;
+    top:0;
+    position: absolute;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+   display: none;
+  }
+   
+  .pup-up{
+    background-color: #fff;
+    position: relative;
+    width:600px;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 25px;
+   
+  }
+  .valider-service{
+    margin-right: 35px;
+  }
+   
+  .field-add-service{
+    width:350px;
+    height:35px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+  }
+   
+  #close{
+    background-color: var(--PRIMARY);
+    fill: var(--BGCOLORPR);
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    float: right;
+    cursor: pointer;
+  }
+   
+  .red{
+    color: rgb(24, 34, 145);
+  }
+
+  div.form-divs svg#add-pup {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--PRIMARY);
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+
+  div.form-divs {
+    padding-top: 10px;
+  }
+   
+  
+  /***********   list artist  ***********/
+
+  div.form-divs-artist label {
+    padding-top: 10px;
+  }
+  .container-list-artist {
+    grid-column: 2/12;
+    grid-row: 3/12;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .search-bar-div {
+    display: flex;
+  }
+
+  .btn-dirart {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .expo-spe {
+    position: relative;
+  }
+ 
+.page-artist{
+    background-color: var(--SECONDARY);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+  }
+   
+  .title-page-artist{
+    color: #94AFAD;
+    font-family: var(--FONTTITLE);
+    font-weight: 700;
+    width:50%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+   
+  .search-container{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+   
+  .search-btn{
+    background-color: transparent;
+    border: none;
+  }
+  .search-btn svg{
+    padding: 0;
+  }
+  .plus{
+    background-color: var(--ACCENT1);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    fill: #fff;
+  }
+  .plus:hover{
+    background-color: var(--ACCENT1);
+    cursor: pointer;
+    fill: #252525;
+  }
+  .table-artiste{
+    display: flex;
+    justify-content: center;
+    }
+   
+    .list-artiste{
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 0.9rem;
+      min-width:500px;
+      text-align: center;
+      background-color: var(--BGCOLORPR);
+    }
+   
+    .list-artiste thead{
+      background-color: var(--PRIMARY);
+      color: var(--FONTCOLOR);
+      font-weight: bold;
+      text-align: center;
+      border-top-left-radius: 25px;
+      border-top-left-radius: 25px;
+    }
+   
+    .list-artiste th,td{
+      padding: 10px;
+    }
+   
+    .list-artiste tbody,tr{
+      border: 1px solid #ddd;
+    }
+   
+    .list-artiste tr:nth-of-type(even){
+      background-color: #fff;
+    }
+
+    .btn-dirart button {
+      width: fit-content;
+      height: fit-content;
+      padding: 1rem 1.25rem;
+      border-radius: 50px;
+      border: none;
+      background-color: #78908E;  
+    }
+
+    .btn-dirart button a {
+      color: var(--FONTCOLOR); 
+    }
+
+/*********** Liste exposition ***********/
+
+  .tab-expo-contain {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .page-exposition{
+    background-color: var(--SECONDARY);
+    width:850px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+  }
+     
+  .title-page-expo{
+    font-family: var(--FONTTITLE);
+    font-weight: 700;
+    width:50%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+     
+  .search-container-expo{
+    margin-left: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+     
+  .search-btn{
+    width: 40px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .search-btn svg{
+    padding: 0;
+  }
+
+  .plus{
+    background-color: var(--PRIMARY);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    fill: #fff;
+  }
+
+  .plus:hover{
+    background-color: var(--ACCENT1);
+    cursor: pointer;
+    fill: #252525;
+  }
+
+  .table-expo{
+    display: flex;
+    justify-content: center;
+  }
+     
+  .list-expo{
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    min-width:500px;
+    text-align: center;
+    background-color: var(--BGCOLORPR);
+  }
+     
+  .list-expo thead{
+    background-color: var(--PRIMARY);
+    color: var(--FONTCOLOR);
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-top-left-radius: 25px;
+  }
+     
+  .list-expo th,td{
+    padding: 10px;
+  }
+     
+  .list-expo tbody,tr{
+    border: 1px solid #ddd;
+  }
+     
+  .list-expo tr:nth-of-type(even){
+    background-color: #fff;
+  }
+
+  input.search-bar {
+    width: 14rem;
+    border-radius: 12px;
+    padding: 0.5rem;
+  }
+
+
+/***********  form-add-dirart ***********/
+
+.form-add-dirart{
+  width:700px;
+  height: 500px;
+  margin-top:20px;
+  margin-left:auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--SECONDARY);
+  color: var(--FONTCOLOR2);
+  border-radius: 25px;
+  font-family: var(--FONTTEXT);
+  font-weight: 500;
+}
+ 
+.title-form-add-dirart{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  font-family: var(--FONTTITLE);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/********** ADD EXPO  ***********/
+
+div.contain-form-add-expo {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  overflow-y: scroll;
+
+}
+
+div.scroll-add-expo {
+  height: 100%;
+
+}
+
+.field-dh{
+  width:150px;
+  height:35px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+ 
+.info-date-hour, .upload-pt{
+  display: flex;
+}
+
+div.info-date-hour div.dat-time {
+  padding-right: 10px;
+}
+ 
+.upload-pt{
+  width: 60%;
+  padding-top: 20px;
+}
+
+div.upload-pt div.form-divs {
+  margin-right: 3rem;
+}
+
+.upload-pt-flex {
+  display: flex;
+  
+}
+ 
+.file-add{
+  margin-top: 10px;
+}
+ 
+.field-select{
+  width:200px;
+  height:35px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+ 
+ 
+.lable-upload{
+  padding-bottom: 10px;
+}
+ 
+/* /* .upload-expo{
+  border:none;
+  background-color: var(--BGCOLORPU);
+  color: var(--FONTCOLOR);
+  height:30px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: var(--FONTTITLE);
+  transition: all 0.3s ease;
+}  */
+ 
+  */
+.image-preview {
+  width: 200px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+img.preview-image {
+  width: 200px;
+  height: 150px;
+  height: auto;
+}
+ 
+.upload-expo {
+  width: 100%;
+  height: auto;
+}
+ 
+.theme-pup{
+  width:100%;
+  height: 100%;
+  top:0;
+  position: absolute;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+ display: none;
+}
+ 
+.valider-theme{
+width:100px;
+height:30px;
+border: none;
+border-radius: 25px;
+background-color: #252525;
+color: var(--FONTCOLOR);
+cursor: pointer;
+font-weight: 700;
+}
+ 
+.valider-theme:hover{
+  background-color: var(--ACCENT1);
+  color: var(--FONTCOLOR);
+}
+ 
+#close{
+  background-color: var(--PRIMARY);
+  fill: var(--BGCOLORPR);
+  width: 25px;
+  height:25px;
+  border-radius: 50%;
+  float: right;
+  cursor: pointer;
+  padding: 2px;
+}
+ 
+#close:hover{
+  background-color: var(--ACCENT1);
+  fill: var(--PRIMARY);
+}
+ 
+/***********  fiche-artist ***********/
+ 
+.fiche-artist{
+  margin: 20px 100px;
+  background-color: var(--SECONDARY);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-fiche-artiste{
+  display: flex;
+  flex-direction: column;
+ justify-content: space-between;
+}
+
+.right-fiche-artist{
+  margin-left: 10px;
+}
+
+.confirm-langue{
+  border:none;
+  background-color: var(--BGCOLORPU);
+  color: var(--FONTCOLOR);
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin:5px 0 ;
+  cursor: pointer;
+  width: 90px;
+  font-weight: 500;
+  font-family: var(--FONTTITLE);
+  transition: all 0.3s ease;
+}
+
+.confirm-langue:hover{
+  background-color: var(--ACCENT1);
+  color: var(--FONTCOLOR2);
+}
+
+.info-artist{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--PRIMARY);
+  border-radius: 12px;
+  margin: 10px 0;
+  width: 250px;
+}
+
+.modif-info{
+  align-self: flex-end;
+  margin-top: 5px;
+}
+
+.costume-upload{
+  border:none;
+  background-color: var(--BGCOLORPU);
+  color: var(--FONTCOLOR);
+  height:30px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100px;
+  font-weight: 500;
+  font-family: var(--FONTTITLE);
+  transition: all 0.3s ease;
+}
+
+
+#img-artiste{
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.title-fiche-artist{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--FONTTITLE);
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+.img-keeper{
+width: 150px;
+height:200px;
+background-color: var(--BGCOLORPR);
+margin: 20px 35px;
+border-radius: 5px;
+}
+
+.img-keeper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.name-artist, .email-artist, .tel-artist{
+margin: 20px;
+}
+
+.info{
+font-weight: 600;
+font-family: var(--FONTTITLE);
+}
+
+
+.dir_artist{
+width: 250px;
+height: auto;
+border: 2px solid var(--PRIMARY);
+border-radius: 12px;
+margin-bottom: 10px;
+}
+
+.title-table-dir-art{
+font-size: 1.1rem;
+text-align: center;
+padding: 5px;
+border-bottom: 1px solid var(--PRIMARY);
+font-family: var(--FONTTITLE);
+font-weight: 600;
+}
+
+.dir_artist p {
+text-align: center;
+padding: 5px 0 7px 0;
+}
+
+.svg-dir-art{
+display: flex;
+margin: 5px;
+align-items: center;
+justify-content: space-around;
+}
+
+.svg-dir-art svg{
+padding: 0;
+}
+
+.left-fiche-artist{
+margin-right: 50px;
+margin-left: 50px;
+display: flex;
+flex-direction: column;
+}
+
+.bio-artiste{
+width: 600px;
+height: 250px;
+border:2px solid var(--PRIMARY);
+border-radius: 12px;
+overflow: scroll;
+overflow-x: hidden;
+padding: 10px;
+margin-top: 20px;
+margin-bottom: 50px;
+line-height: 1.2rem;
+display: flex;
+flex-direction: column;
+}
+
+.info-bio{
+font-weight: 600;
+font-family: var(--FONTTITLE);
+padding-bottom: 5px;
+}
+
+.select-langue-fiche-artist{
+margin: 10px 0;
+}
+.select-langue-fiche-artist label{
+font-weight: 600;
+font-family: var(--FONTTITLE);
+}
+
+.add-langue{
+width: 150px;
+}
+.artwork-wrapper{
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: var(--PRIMARY);
+padding: 1rem;
+border-radius: 12px;
+}
+
+#back-btn, #next-btn{
+width: 25px;
+height: 25px;
+border-radius: 50%;
+fill: #fff;
+background-color: black;
+padding: 5px;
+margin: 0 10px;
+}
+.list-artwork{
+width: 620px;
+display: flex;
+background-color: var(--PRIMARY);
+overflow-x: scroll;
+}
+
+.list-artwork::-webkit-scrollbar{
+display: none;
+}
+.card-keeper{
+width: 100%;
+display:flex;
+flex-wrap: nowrap;
+
+padding: 5px 0;
+gap: 10px;
+
+}
+.card{
+width:200px;
+border-radius: 25px;
+flex-grow: 0;
+flex-shrink: 0;
+background-color: #fff;
+
+}
+
+.image-content,
+.card-content{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding:10px 14px;
+}
+
+
+.image-content{
+position: relative;
+row-gap: 5px;
+padding: 25px 0;
+}
+
+.card-image{
+position: relative;
+height:150px;
+width :150px;
+background-color: #F3f3f3;
+}
+.overlay{
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: #252525;
+border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+content: '';
+position: absolute;
+right:0;
+bottom: -15px;
+height: 15px;
+width: 15px;
+background-color: var(--BGCOLORPU);
+}
+
+.overlay::after{
+border-radius:0 25px 0 0 ;
+background-color: #fff;
+}
+.card-image .card-img{
+position: absolute;
+height: 100%;
+width: 100%;
+object-fit: cover;
+border: 4px solid var(--BGCOLORPR);
+}
+
+.libelle-artwork{
+font-size: 1.2rem;
+font-weight: 500;
+}
+
+.voir-plus{
+border:none;
+background-color: var(--BGCOLORPU);
+color: var(--FONTCOLOR);
+border-radius: 20px;
+padding: 5px 10px;
+margin:5px 0 ;
+cursor: pointer;
+width: 90px;
+font-weight: 500;
+font-family: var(--FONTTITLE);
+transition: all 0.3s ease;
+}
+
+.voir-plus:hover{
+background-color: var(--ACCENT1);
+color: var(--FONTCOLOR2);
+}
+
+/********* QR CODE  ********/
+
+.qr-container{
+  width: 100%;
+  height: 10%;
+  border: 1px solid #494eea;
+  outline: 0;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border-radius: 5px;
+}
+ 
+.qr-container button {
+  width: 150px;
+  height: 50px;
+  background:black;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 20px 0;
+  font-weight: 500;
+}
+ 
+.qr-container button:hover{
+  background: var(--ACCENT1);
+  color: var(--FONTTEXT);
+}
+ 
+#qrText{
+  width:60%;
+}
+#imgBox{
+  width:250px;
+  border-radius: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+#imgBox img {
+  width: 100%;
+  padding: 10px;
+}
+#imgBox.show-img{
+  max-height: 400px;
+  margin: 10px;
+  border: 1px solid #d1d1d1;
+}
+.error {
+  animation: shake 0.1s linear 10;
+}
+@keyframes shake{
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+div.sizing-qr {
+  width: 60%;
+  height: fit-content;
+  margin: auto;
+  padding-top: 2rem;
+}
+ 
+@media print
+{
+  body {
+     font-size: 12pt;
+    }    
+  .hide-on-print {
+    display: none;
+  } }
+
+/********  ARTISTE *******/
+
+  .info-atists{
+    margin:5px 8px 0px 5px;
+    font-weight: bold;
+  }
+   
+  .artist-info-content{
+    padding: 10px;
+  }
+   
+  .artist-info-content p{
+    margin-left: 10px;
+    margin-top:2px;
+  }
+
+/********  TO DO *******/
+  
+.todo-grid,
+.todo-input-grid {
+  display: grid;
+  grid-template-columns: 100px 75px 100px;
+  gap: 10px;
+  align-items: center;
+
+}
+
+.todo-input-grid {
+  margin-bottom: 10px;
+  align-items: stretch;
+}
+
+
+.name-input,
+.date-input {
+  font-size: 15px;
+  padding: 6px;
+}
+
+.add-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+.del-btn {
+  background-color: darkred;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 0;
+}

@@ -1,0 +1,39 @@
+@media only screen and (max-width: 1340px)  {
+
+    .gestion {
+        grid-column: 2/13;
+    }
+    
+
+    div.col {
+        grid-column:1/13;
+        overflow-y:scroll;
+    }
+
+    /* ADD TYPE OEUVRE LIGHTBOX */
+
+   div.box-add-type {
+        height: 250px;
+    }
+
+    div.box-add-type h3 {
+        padding-top: 1rem;
+    }
+
+    div.container-principal {
+        flex-direction: column;
+    }
+
+    div.oeuvre-unique-infos {
+        grid-column: 1/13;
+      }
+
+    div.oeuvre-unique-infos {
+        grid-column: 1/13;
+      }
+   
+}
+
+
+
+/* 820 */
